@@ -8,7 +8,7 @@ void UpdateBuffer(values_by_draw& values_draw, const int & newWidth, const int& 
     delete[] values_draw.data;
     values_draw.data = new uint8_t[static_cast<size_t>(values_draw.screen_width) * static_cast<size_t>(values_draw.screen_height) * 4]();
 
-    std::cout << "Updated size: " << values_draw.screen_width << "x" << values_draw.screen_height << std::endl;
+    //std::cout << "Updated size window: " << values_draw.screen_width << "x" << values_draw.screen_height << std::endl;
 }
 
 void draw_pixel(values_by_draw& values_draw, int const& pX, int const& pY, color const& c)

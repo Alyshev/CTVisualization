@@ -66,10 +66,15 @@ void loop_thread(double& fps, values_by_draw& values_draw, std::vector<std::vect
 
 int main(int, char**)
 {
+    int count_materials = get_count_materials_in_file();
+    if (count_materials < 1) { 
+        std::cout << "Materials are missing" << std::endl; 
+        system("pause");
+        return 1;
+    }
 
     values_by_draw values_draw;
 
-    int count_materials = get_count_materials_in_file();
     std::vector<values_by_materials> values_mat;
     values_mat.reserve(count_materials);
     for (int i = 0; i < count_materials; i++) {
